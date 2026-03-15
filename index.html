@@ -110,7 +110,7 @@
       width: 1850px; /* Width for Box 2 */
       height: 230px; /* Changed height of Box 2 to 190px */
       background-color: #5c7c38; /* Slightly darker green background */
-      opacity: 0.35; /* 30% transparency */
+      opacity: 0.45; /* 30% transparency */
       z-index: 0.5; /* Ensures the box is behind the text */
     }
     /* Box 3 */
@@ -118,7 +118,7 @@
       border: 2px solid black;
       border-radius: 10px;
       position: absolute;
-      top: 130px; /* Top of Box 3 */
+      top: 128px; /* Top of Box 3 */
       left: 830px; /* Left of Box 3 (changed to 830px) */
       width: 1033px; /* Width of Box 3 (changed to 1033px) */
       height: 558px; /* Height of Box 3 (changed to 558px) */
@@ -131,20 +131,20 @@
       border: 2px solid black;
       border-radius: 10px;
       position: absolute;
-      top: 207px; /* Top of Box 4 (changed to 207px) */
+      top: 205px; /* Top of Box 4 (changed to 207px) */
       left: 235px; /* Left of Box 4 (changed to 235px) */
       width: 1238px; /* Width of Box 4 */
       height: 145px; /* Height of Box 4 */
       background-color: #f6d2b1; /* Pale orange background */
       opacity: 0.7; /* 30% transparency */
-      z-index: 1; /* Ensures the box is behind the text */
+      z-index: 0.5; /* Ensures the box is behind the text */
     }
     /* Box 5 */
     .box-5 {
       border: 2px solid black;
       border-radius: 10px;
       position: absolute;
-      top: 270px; /* Top changed to 310px */
+      top: 280px; /* Top changed to 310px */
       left: 420px; /* Left changed to 420px */
       width: 800px; /* Width of Box 5 */
       height: 260px; /* Height of Box 5 */
@@ -295,10 +295,8 @@
     { column: 2, row: 3, text: "Cup-set/Balkan/French" },
     { column: 4, row: 3, text: "Yogurt", bold: true },
     { column: 6, row: 3, text: "Stirred/Swiss" },
-    { column: 9, row: 3, text: "Ambient yogurt" },  
     { column: 2, row: 4, text: "Concentrated", bold: true },
     { column: 4, row: 4, text: "Indian/Dahi" },
-    { column: 3, row: 4, text: "Australian" },
     { column: 6, row: 4, text: "Drinkable", bold: true },
     { column: 1, row: 5, text: "Greek/straggisto" },
     { column: 2, row: 5, text: "Chakka" },
@@ -308,7 +306,7 @@
     { column: 1, row: 6, text: "Labneh" },
     { column: 4, row: 6, text: "Salty", bold: true },
     { column: 6, row: 6, text: "Chaas" },
-    { column: 9, row: 6, text: "Southeast Asian style" },
+    { column: 9, row: 6, text: "Ambient drinkable yogurt" },
     { column: 1, row: 7, text: "Icelandic/skyr" },
     { column: 5, row: 7, text: "Ayran" },
     { column: 7, row: 7, text: "Yayik ayrani" },
@@ -401,167 +399,159 @@ if (itemsInCell[0].bold) {
           // Check for specific text and show popup accordingly
           if (item.textContent === "Clabber") {
             showPopup(
-              "<b>Clabber</b>\n Origin: Ubiquitous\n Microbes: Mesophilic mix\n Preparation Notes: Spontaneous fermentation of milk"
+              "<b>Clabber</b>\n Origin: Ubiquitous\n Microbes: Mesophilic mix\n Preparation Notes: Spontaneous fermentation of milk."
             );
           } else if (item.textContent === "Cup-set/Balkan/French") {
             showPopup(
-                "<b>Cup-set/Balkan/French style yogurt</b>\n Origin: Europe\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Product consumed directly from fermentation vessel. Thick consistency. Bulgarian varieities exhibit high acid level. French style is fermented in a glass jar"
+                "<b>Cup-set/Balkan/French style yogurt</b>\n Origin: Europe\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Product consumed directly from fermentation vessel. Thick consistency. Bulgarian varieities exhibit high acid level. French style is fermented in a glass jar."
             );
           } else if (item.textContent === "Stirred/Swiss") {
             showPopup(
-                "<b>Stirred/Swiss style yogurt</b>\n Origin: Switzerland\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt is stirred in tanks, typically with added flavors and sugar, after fermentation and prior to packaging"
+                "<b>Stirred/Swiss style yogurt</b>\n Origin: Switzerland\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt is stirred in tanks, typically with added flavors and sugar, after fermentation and prior to packaging."
             );
         } else if (item.textContent === "Matzoon/Caspian Sea") {
             showPopup(
-                "<b>Matzoon/Caspian Sea</b>\n Origin: Caspian Sea/Caucaus region\n Microbes: Mixture of thermophilic (S. thermophilus and L. bulgaricus) and mesophilic\n Preparation Notes: Traditional matzoon has diverse microbial community. A similar product is popular in Japan and labeled as Caspian Sea yogurt"
-            );
-        } else if (item.textContent === "Ambient yogurt") {
-            showPopup(
-                "<b>Ambient yogurt</b>\n Origin: Ubiquitous\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus) cultures used, but not live-and-active\n Preparation Notes: Yogurt is heated after fermentation to inactivate microorganisms and allow for ambient storage without refrigeration"
+                "<b>Matzoon/Caspian Sea</b>\n Origin: Caspian Sea/Caucaus region\n Microbes: Mixture of thermophilic (S. thermophilus and L. bulgaricus) and mesophilic\n Preparation Notes: Traditional matzoon has diverse microbial community. A similar product is popular in Japan and labeled as Caspian Sea yogurt."
             );
         } else if (item.textContent === "Indian/Dahi") {
             showPopup(
-                "<b>Indian yogurt/Dahi</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt with adjunct cultures from Indian subcontinent"
-            );
-        } else if (item.textContent === "Australian") {
-            showPopup(
-                "<b>Australian yogurt</b>\n Origin: USA\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Slightly concentrated yogurt (TS >12%) with added sugar and/or honey"
+                "<b>Indian yogurt/Dahi</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt with adjunct cultures from Indian subcontinent."
             );
         } else if (item.textContent === "Greek/straggisto") {
             showPopup(
-                "<b>Greek style yogurt/straggisto</b>\n Origin: Greece\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Traditionally strained whole milk yogurt. Fat content ~10%. Cows milk is most common, but sheep and goat's milk may also be used"
+                "<b>Greek style yogurt/straggisto</b>\n Origin: Greece\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Traditionally strained whole milk yogurt. Fat content ~10%. Cows milk is most common, but sheep and goat's milk may also be used."
             );
         } else if (item.textContent === "Chakka") {
             showPopup(
-                "<b>Chakka</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained (concentrated) milk"
+                "<b>Chakka</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained (concentrated) milk."
             );
         } else if (item.textContent === "Shrikhand") {
             showPopup(
-                "<b>Shrikhand</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained (concentrated) milk produced from chakka - an intermediate product - with added sugar and flavors"
+                "<b>Shrikhand</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained (concentrated) milk produced from chakka - an intermediate product - with added sugar and flavors."
             );
         } else if (item.textContent === "Lassi") {
             showPopup(
-                "<b>Lassi</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Indian yogurt (dahi) typically mixed with water, sugar, flavors, and/or spices. Traditionally served in a clay cup and may be topped with clotted cream"
+                "<b>Lassi</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Indian yogurt (dahi) typically mixed with water, sugar, flavors, and/or spices. Traditionally served in a clay cup and may be topped with clotted cream."
             );
         } else if (item.textContent === "Drinkable yogurt") {
             showPopup(
-                "<b>Drinkable yogurt</b>\n Origin: Ubiquitous\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt that has been sheared/stirred to prouduce a thin, fluid consistency for drinking. May be diluted with water and/or mixed with sugar and flavors"
+                "<b>Drinkable yogurt</b>\n Origin: Ubiquitous\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt that has been sheared/stirred to prouduce a thin, fluid consistency for drinking. May be diluted with water and/or mixed with sugar and flavors."
             );
         } else if (item.textContent === "Labneh") {
             showPopup(
-                "<b>Labneh</b>\n Origin: Levant & Egypt\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained yogurt. Also referred to as labaneh, lebneh, and labna depending on origin"
+                "<b>Labneh</b>\n Origin: Levant & Egypt\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained yogurt. Also referred to as labaneh, lebneh, and labna depending on origin."
             );
         } else if (item.textContent === "Chaas") {
             showPopup(
-                "<b>Chaas</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Indian yogurt (dahi) churned with water using a whipper (madhani). May also be prepared without added salt"
+                "<b>Chaas</b>\n Origin: India\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Indian yogurt (dahi) churned with water using a whipper (madhani). May also be prepared without added salt."
             );
-        } else if (item.textContent === "Southeast Asian style") {
+        } else if (item.textContent === "Ambient drinkable yogurt") {
             showPopup(
-                "<b>Southeast Asian style yogurt</b>\n Origin: Southeast Asia\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus) cultures used, but not live-and-active\n Preparation Notes: Ambient yogurt beverage popular in southeast Asia (China, Thailand, etc.)"
+                "<b>Ambient drinkable yogurt</b>\n Origin: Ubiquitous\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus) cultures used, but not live-and-active\n Preparation Notes: Drinkable yogurt that is heated after culturing to allow ambient storage without refrigeration. Popular in Asia (China) and Africa."
             );
         } else if (item.textContent === "Icelandic/skyr") {
             showPopup(
-                "<b>Icelandic yogurt/skyr</b>\n Origin: Iceland\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained nonfat yogurt. May be served with cream dressing"
+                "<b>Icelandic yogurt/skyr</b>\n Origin: Iceland\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Strained nonfat yogurt. May be served with cream dressing."
             );
         } else if (item.textContent === "Ayran") {
             showPopup(
-                "<b>Ayran</b>\n Origin: Türkiye\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage typically consumed fresh and served with a foam top"
+                "<b>Ayran</b>\n Origin: Türkiye\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage typically consumed fresh and served with a foam top."
             );
         } else if (item.textContent === "Doogh") {
             showPopup(
-                "<b>Doogh</b>\n Origin: Iran\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage typically consumed fresh, served with a foam top, and seasoned with spices"
+                "<b>Doogh</b>\n Origin: Iran\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage typically consumed fresh, served with a foam top, and seasoned with spices."
             );
         } else if (item.textContent === "Yayik ayrani") {
             showPopup(
-                "<b>Yayik ayrani</b>\n Origin: Türkiye\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage made from buttermilk"
+                "<b>Yayik ayrani</b>\n Origin: Türkiye\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage made from buttermilk."
             );
         } else if (item.textContent === "Jameed") {
             showPopup(
-                "<b>Jameed</b>\n Origin: Levant\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Cultured sheep's milk that is salted and dried into balls that can be stored without refrigeration due to their low activity. Goat and/or cow's milk may also be used. Yogurt or mesophilic starters may be used"
+                "<b>Jameed</b>\n Origin: Levant\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Cultured sheep's milk that is salted and dried into balls that can be stored without refrigeration due to their low moisture content. Goat and/or cow's milk may also be used. Yogurt or mesophilic starters may be used."
             );
         } else if (item.textContent === "Shaneenah") {
             showPopup(
-                "<b>Shaneenah</b>\n Origin: Levant\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage made from goat or sheep's milk"
+                "<b>Shaneenah</b>\n Origin: Levant\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Diluted yogurt beverage made from goat or sheep's milk."
             );
         } else if (item.textContent === "Quark") {
             showPopup(
-                "<b>Quark/quarg</b>\n Origin: Germany/Central Europe\n Microbes: Mesophilic (Lactococcus lactis subspecies lactis and cremoris and others)\n Preparation Notes: Concentrated nonfat cultured milk. A small amount of rennet is sometimes used. May be served with cream dressing"
+                "<b>Quark/quarg</b>\n Origin: Germany/Central Europe\n Microbes: Mesophilic (Lactococcus lactis subspecies lactis and cremoris and others)\n Preparation Notes: Concentrated nonfat cultured milk. A small amount of rennet is sometimes used. May be served with cream dressing."
             );
         } else if (item.textContent === "Cottage cheese") {
             showPopup(
-                "<b>Cottage cheese</b>\n Origin: Unknown\n Microbes: Mesophilic (L. lactis subspecies lactis and cremoris and others)\n Preparation Notes: Curdled milk (typically skim) curds dried and mixed with a cream dressing. Rennet is often used. Some modern procuers use thermophilic cultures"
+                "<b>Cottage cheese</b>\n Origin: Unknown\n Microbes: Mesophilic (L. lactis subspecies lactis and cremoris and others)\n Preparation Notes: Curdled milk (typically skim) drained to remove whey to make dry curd and mixed with a cream dressing. Rennet is often used. Some modern producers use thermophilic cultures."
             );
         } else if (item.textContent === "Mishti doi") {
             showPopup(
-                "<b>Mishti doi</b>\n Origin: India & Bangladesh\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt produced from milk that is heated prior to culturing with added sugar to produce caramel-flavored milk. Traditionally fermented in clay pots"
+                "<b>Mishti doi</b>\n Origin: India & Bangladesh\n Microbes: Thermophilic (S. thermophilus and L. bulgaricus)\n Preparation Notes: Yogurt produced from milk that is heated prior to culturing with added sugar to produce caramel-flavored milk. Traditionally fermented in clay pots."
             );
         } else if (item.textContent === "Bakers cheese") {
             showPopup(
-                "<b>Bakers cheese</b>\n Origin: USA\n Microbes: Mesophilic\n Preparation Notes: Concentrated cultured skim milk to ~20% protein. A small amount of rennet is sometimes used. Often used in pastries"
+                "<b>Bakers cheese</b>\n Origin: USA\n Microbes: Mesophilic\n Preparation Notes: Concentrated cultured skim milk to ~20% protein. A small amount of rennet is sometimes used. Often used in pastries."
             );
         } else if (item.textContent === "Zabady") {
             showPopup(
-                "<b>Zabady</b>\n Origin: Levant & Egypt\n Microbes: Mesophilic\n Preparation Notes: Cup-set cultured milk typically produced from buffalo's milk. Yogurt cultures may also be used"
+                "<b>Zabady</b>\n Origin: Levant & Egypt\n Microbes: Mesophilic\n Preparation Notes: Cup-set cultured milk typically produced from buffalo's milk. Yogurt cultures may also be used."
             );
         } else if (item.textContent === "Dadiah") {
             showPopup(
-                "<b>Dadiah</b>\n Origin: Indonesia\n Microbes: Mesophilic\n Preparation Notes: Cultured buffalo milk beverage"
+                "<b>Dadiah</b>\n Origin: Indonesia\n Microbes: Mesophilic\n Preparation Notes: Cultured buffalo milk beverage."
             );
         } else if (item.textContent === "Suusac") {
             showPopup(
-                "<b>Suusac</b>\n Origin: East Africa\n Microbes: Mesophilic\n Preparation Notes: Spontaneously fermented milk typically produced from camel's milk. Traditionally cultured and stored in smoked gourds"
+                "<b>Suusac</b>\n Origin: East Africa\n Microbes: Mesophilic\n Preparation Notes: Spontaneously fermented milk typically produced from camel's milk. Traditionally cultured and stored in smoked gourds."
             );
         } else if (item.textContent === "Leben") {
             showPopup(
-                "<b>Leben</b>\n Origin: Levant\n Microbes: Mesophilic\n Preparation Notes: Cultured milk beverage that is churned after fermenting to remove fat"
+                "<b>Leben</b>\n Origin: Levant\n Microbes: Mesophilic\n Preparation Notes: Cultured milk beverage that is churned after fermenting to remove fat."
             );
         } else if (item.textContent === "Mursik") {
             showPopup(
-                "<b>Mursik</b>\n Origin: Kenya\n Microbes: Mesophilic\n Preparation Notes: Cow's milk cultured beverage stored in charred calabash gourds"
+                "<b>Mursik</b>\n Origin: Kenya\n Microbes: Mesophilic\n Preparation Notes: Cow's milk cultured beverage stored in charred calabash gourds."
             );
         } else if (item.textContent === "Laban zeer") {
             showPopup(
-                "<b>Laban zeer</b>\n Origin: Egypt\n Microbes: Mesophilic\n Preparation Notes: Concentrated cultured milk (laban kad) produced by straining"
+                "<b>Laban zeer</b>\n Origin: Egypt\n Microbes: Mesophilic\n Preparation Notes: Concentrated cultured milk (laban kad) produced by straining."
             );
         } else if (item.textContent === "Koumiss") {
             showPopup(
-                "<b>Koumiss</b>\n Origin: Mongolia\n Microbes: Mesophilic\n Preparation Notes: Cultured milk beverage produced from mare's milk"
+                "<b>Koumiss</b>\n Origin: Mongolia\n Microbes: Mesophilic\n Preparation Notes: Cultured milk beverage produced from mare's milk."
             );
         } else if (item.textContent === "Kefir") {
             showPopup(
-                "<b>Kefir</b>\n Origin: Caucaus Mountains\n Microbes: Mesophilic cultures vary considerably, but typically include L. kefiranofaciens and Saccharomyces cerevisiae at a minimum\n Preparation Notes: Cultured milk beverage produced from mixture of mesophilic bacteria and yeast that produce a symbiotic culture grain used for propogation of subsequent batches"
+                "<b>Kefir</b>\n Origin: Caucaus Mountains\n Microbes: Mesophilic cultures vary considerably, but typically include L. kefiranofaciens and Saccharomyces cerevisiae at a minimum\n Preparation Notes: Cultured milk beverage produced from mixture of mesophilic bacteria and yeast that produce a symbiotic culture grain used for propogation of subsequent batches."
             );
         } else if (item.textContent === "Kashk/Kishk") {
             showPopup(
-                "<b>Kashk/kishk</b>\n Origin: Central Asia\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Concentrated and dried cultured milk fermented with either mesophilic or thermophilic starter cultures"
+                "<b>Kashk/kishk</b>\n Origin: Central Asia\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Cultured milk is fermented with either mesophilic or thermophilic starter cultures and strained to remove whey. The concentrated cultured milk is then mixed with flour prior to drying in the sun and stored at ambient temperature. "
             );
         } else if (item.textContent === "Žinčica") {
             showPopup(
-                "<b>Žinčica</b>\n Origin: Eastern Europe\n Microbes: Mesophilic\n Preparation Notes: Cultured milk beverage made from the whey derived from sheep's milk cheese production"
+                "<b>Žinčica</b>\n Origin: Eastern Europe\n Microbes: Mesophilic\n Preparation Notes: Cultured milk beverage made from the whey derived from sheep's milk cheese production."
             );
         } else if (item.textContent === "Chal") {
             showPopup(
-                "<b>Chal</b>\n Origin: Central Asia\n Microbes: Mesophilic\n Preparation Notes: Cultured camel's milk beverage"
+                "<b>Chal</b>\n Origin: Central Asia\n Microbes: Mesophilic\n Preparation Notes: Cultured camel's milk beverage."
             );
         } else if (item.textContent === "Blaand") {
             showPopup(
-                "<b>Blaand</b>\n Origin: Northern Europe\n Microbes: Mesophilic\n Preparation Notes: Slightly alcoholic cultured milk produced from whey"
+                "<b>Blaand</b>\n Origin: Northern Europe\n Microbes: Mesophilic\n Preparation Notes: Slightly alcoholic cultured milk produced from whey."
             );
         } else if (item.textContent === "Sour cream") {
             showPopup(
-                "<b>Sour cream</b>\n Origin: Unknown\n Microbes: Mesophilic\n Preparation Notes: Cultured cream. Typical fat content > 14%"
+                "<b>Sour cream</b>\n Origin: Unknown\n Microbes: Mesophilic\n Preparation Notes: Cultured cream. Typical fat content > 14%."
             );
         } else if (item.textContent === "Shubat") {
             showPopup(
-                "<b>Shubat</b>\n Origin: Levant\n Microbes: Mesophilic\n Preparation Notes: Cultured camel's milk beverage"
+                "<b>Shubat</b>\n Origin: Levant\n Microbes: Mesophilic\n Preparation Notes: Cultured camel's milk beverage."
             );
         } else if (item.textContent === "Gariss") {
             showPopup(
-                "<b>Gariss</b>\n Origin: Sudan\n Microbes: Mesophilic\n Preparation Notes: Cultured camel's milk mixed with onion and black cumin. Traditional fermentation is carried out in bags on the backs of camels via a continuous fermentation process (some cultured milk is removed for consumption and fresh milk is poured in regularly). The movement of the camel breaks the curd and maintains fluid consistency"
+                "<b>Gariss</b>\n Origin: Sudan\n Microbes: Mesophilic\n Preparation Notes: Cultured camel's milk mixed with onion and black cumin. Traditional fermentation is carried out in bags on the backs of camels via a continuous fermentation process (some cultured milk is removed for consumption and fresh milk is poured in regularly). The movement of the camel breaks the curd and maintains fluid consistency."
             );
         } else if (item.textContent === "Ryazhenka") {
             showPopup(
-                "<b>Ryazhenka</b>\n Origin: Ukraine\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Cultured milk beverage produced from evaporated, slightly-browned milk. Traditionally, milk is baked in an oven for several hours prior to culturing to concentrate and brown the milk"
+                "<b>Ryazhenka</b>\n Origin: Ukraine\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Cultured milk beverage produced from evaporated, slightly-browned milk. Traditionally, milk is baked in an oven for several hours prior to culturing to concentrate and brown the milk."
             );
         } else if (item.textContent === "Cream cheese") {
             showPopup(
@@ -573,95 +563,95 @@ if (itemsInCell[0].bold) {
             );
         } else if (item.textContent === "Anbaris") {
             showPopup(
-                "<b>Anbaris</b>\n Origin: Lebanon\n Microbes: Mesophilic\n Preparation Notes: Produced from raw goat's milk"
+                "<b>Anbaris</b>\n Origin: Lebanon\n Microbes: Mesophilic\n Preparation Notes: Produced from raw goat's milk."
             );
         } else if (item.textContent === "Créme-fraîche") {
             showPopup(
-                "<b>Créme-fraîche</b>\n Origin: France\n Microbes: Mesophilic\n Preparation Notes: Cultured cream. Typical fat content > 40%"
+                "<b>Créme-fraîche</b>\n Origin: France\n Microbes: Mesophilic\n Preparation Notes: Cultured cream. Typical fat content > 40%."
             );
         } else if (item.textContent === "Suzma") {
             showPopup(
-                "<b>Suzma</b>\n Origin: Türkiye\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Concentrated cultured milk produced by straining qatik"
+                "<b>Suzma</b>\n Origin: Türkiye\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Concentrated cultured milk produced by straining qatik."
             );
         } else if (item.textContent === "Viili") {
             showPopup(
-                "<b>Viili</b>\n Origin: Finland\n Microbes: Mesophilic\n Preparation Notes: Cultured milk with a mold-like yeast (Geotrichum candidum) layer present on the surface. Very ropy consistency"
+                "<b>Viili</b>\n Origin: Finland\n Microbes: Mesophilic\n Preparation Notes: Cultured milk with a mold-like yeast (Geotrichum candidum) layer present on the surface. Very ropy consistency."
             );
         } else if (item.textContent === "Nailao/Beijing") {
             showPopup(
-                "<b>Nailao/Beijing style yogurt</b>\n Origin: China\n Microbes: Mesophilic\n Preparation Notes: Milk with added sugar and mixed with rice wine and mesophilic starter cultures. Poured in ceramic containers and heated briefly before cooling"
+                "<b>Nailao/Beijing style yogurt</b>\n Origin: China\n Microbes: Mesophilic\n Preparation Notes: Milk with added sugar and mixed with rice wine and mesophilic starter cultures. Poured in ceramic containers and heated briefly before cooling."
             );
         } else if (item.textContent === "Crema-espesa") {
             showPopup(
-                "<b>Crema-espesa</b>\n Origin: Mexico\n Microbes: Mesophilic\n Preparation Notes: A mixture of heavy cream and buttermilk that is cultured"
+                "<b>Crema-espesa</b>\n Origin: Mexico\n Microbes: Mesophilic\n Preparation Notes: A mixture of heavy cream and buttermilk that is cultured."
             );
         } else if (item.textContent === "Dry jocoque") {
             showPopup(
-                "<b>Dry jocoque</b>\n Origin: Mexico\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Strained, cultured milk"
+                "<b>Dry jocoque</b>\n Origin: Mexico\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Strained, cultured milk."
             );
         } else if (item.textContent === "Jocoque") {
             showPopup(
-                "<b>Jocoque</b>\n Origin: Mexico\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Cultured milk. Popularized in Mexico from Lebanese immigrants"
+                "<b>Jocoque</b>\n Origin: Mexico\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Cultured milk. Popularized in Mexico from Lebanese immigrants."
             );
         } else if (item.textContent === "Calpis soda") {
             showPopup(
-                "<b>Calpis soda</b>\n Origin: Japan\n Microbes: Thermophilic\n Preparation Notes: Carbonated cultured milk. Also sold in non-carbondated (Calpico) and concentrated forms"
+                "<b>Calpis soda</b>\n Origin: Japan\n Microbes: Thermophilic\n Preparation Notes: Carbonated cultured milk. Also sold in non-carbondated (Calpico) and concentrated forms."
             );
         } else if (item.textContent === "Filmjölk") {
             showPopup(
-                "<b>Filmjölk</b>\n Origin: Sweden\n Microbes: Mesophilic (lactococcus spp., leuconostoc mesenteroides, and more)\n Preparation Notes: A variant of fil, a Swedish cultured milk. Filmjölk consists of a fat content ~3%"
+                "<b>Filmjölk</b>\n Origin: Sweden\n Microbes: Mesophilic (lactococcus spp., leuconostoc mesenteroides, and more)\n Preparation Notes: A variant of fil, a Swedish cultured milk. Filmjölk consists of a fat content ~3%."
             );
         } else if (item.textContent === "Acidophilus milk") {
             showPopup(
-                "<b>Acidophilus milk</b>\n Origin: USA\n Microbes: Thermophilic (Lactobacillus acidophilus)\n Preparation Notes: Cultured milk containing lactobacillus acidophilus. Invented by John Kellogg and originally made using soy milk"
+                "<b>Acidophilus milk</b>\n Origin: USA\n Microbes: Thermophilic (Lactobacillus acidophilus)\n Preparation Notes: Cultured milk containing lactobacillus acidophilus. Invented by John Kellogg and originally made using soy milk."
             );
         } else if (item.textContent === "Smetana") {
             showPopup(
-                "<b>Smetana</b>\n Origin: Eastern Europe\n Microbes: Mesophilic\n Preparation Notes: Cultured cream with fat content varying from 10-70%, but most typically ~40%"
+                "<b>Smetana</b>\n Origin: Eastern Europe\n Microbes: Mesophilic\n Preparation Notes: Cultured cream with fat content varying from 10-70%, but most typically ~40%."
             );
         } else if (item.textContent === "Ylette") {
             showPopup(
-                "<b>Ylette</b>\n Origin: Northern Europe\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Slightly concentrated cultured part-skim milk. Typical fat content ~2% and protein content ~6%. Yogurt starter cultures may be used"
+                "<b>Ylette</b>\n Origin: Northern Europe\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Slightly concentrated cultured part-skim milk. Typical fat content ~2% and protein content ~6%. Yogurt starter cultures may be used."
             );
         } else if (item.textContent === "Ergo") {
             showPopup(
-                "<b>Ergo</b>\n Origin: Ethiopia\n Microbes: Mesophilic\n Preparation Notes: Spontaneous fermentation of milk"
+                "<b>Ergo</b>\n Origin: Ethiopia\n Microbes: Mesophilic\n Preparation Notes: Spontaneous fermentation of milk."
             );
         } else if (item.textContent === "Laban rayeb") {
             showPopup(
-                "<b>Laban rayeb</b>\n Origin: Egypt\n Microbes: Mesophilic\n Preparation Notes: Whole milk left in earthwneware pot to spontaneously ferment. The top layer (cultured cream) is removed for butter making and the remaining cultured milk is consumed as a beverage"
+                "<b>Laban rayeb</b>\n Origin: Egypt\n Microbes: Mesophilic\n Preparation Notes: Whole milk left in earthwneware pot to spontaneously ferment. The top layer (cultured cream) is removed for butter making and the remaining cultured milk is consumed as a beverage."
             );
         } else if (item.textContent === "Amasi") {
             showPopup(
-                "<b>Amasi</b>\n Origin: South Africa\n Microbes: Mesophilic\n Preparation Notes: Spontaneous fermentation of milk in a calabash gourd"
+                "<b>Amasi</b>\n Origin: South Africa\n Microbes: Mesophilic\n Preparation Notes: Spontaneous fermentation of milk in a calabash gourd."
             );
         } else if (item.textContent === "Kaymak") {
             showPopup(
-                "<b>Kaymak</b>\n Origin: Levant\n Microbes: Mesophilic\n Preparation Notes: Whole milk concentrated by high heat for an extended period. The heated cream is separated and the remaining skimmed milk is cultured. Many variations exist. Typically consumed as a breakfast food"
+                "<b>Kaymak</b>\n Origin: Levant\n Microbes: Mesophilic\n Preparation Notes: Whole milk concentrated by high heat for an extended period. The heated cream is separated and the remaining skimmed milk is cultured. Many variations exist. Typically consumed as a breakfast food."
             );
         } else if (item.textContent === "Farmers cheese/tvorog") {
             showPopup(
-                "<b>Farmers cheese/tvorog</b>\n Origin: Eastern Europe\n Microbes: Mesophilic\n Preparation Notes: Typically produced from skim milk (though fat content up to whole milk is sometimes used), cultured, and strained. Tvorog, a Russian variant, is produced exclusively from skim milk"
+                "<b>Farmers cheese/tvorog</b>\n Origin: Eastern Europe\n Microbes: Mesophilic\n Preparation Notes: Typically produced from skim milk (though fat content up to whole milk is sometimes used), cultured, and strained. Tvorog, a Russian variant, is produced exclusively from skim milk."
             );
         } else if (item.textContent === "Sikarni") {
             showPopup(
-                "<b>Sikarni</b>\n Origin: Nepal\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Strained yogurt that is whipped and mixed with spices, sugar, and/or flavorings"
+                "<b>Sikarni</b>\n Origin: Nepal\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Strained yogurt that is whipped and mixed with spices, sugar, and/or flavorings."
             );
         } else if (item.textContent === "Qatik") {
             showPopup(
-                "<b>Qatik</b>\n Origin: Türkiye\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Typically produced from whole milk"
+                "<b>Qatik</b>\n Origin: Türkiye\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Typically produced from whole milk."
             );
         } else if (item.textContent === "Probiotic Drinks (Yakult, etc.)") {
             showPopup(
-                "<b>Probiotic Drinks (Yakult, etc.)</b>\n Origin: Varied\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Probiotic strains of bacteria are used for a variety of products"
+                "<b>Probiotic Drinks (Yakult, etc.)</b>\n Origin: Varied\n Microbes: Mesophilic or thermophilic\n Preparation Notes: Probiotic strains of bacteria are used for a variety of products. Typically prepared as a beverage in small serving sizes (<100 mL)."
             );
         } else if (item.textContent === "Sana") {
             showPopup(
-                "<b>Sana</b>\n Origin: Romania\n Microbes: Mesophilic\n Preparation Notes: Cultured, raw milk"
+                "<b>Sana</b>\n Origin: Romania\n Microbes: Mesophilic\n Preparation Notes: Cultured, raw milk."
             );
         } else if (item.textContent === "Cultured buttermilk") {
             showPopup(
-                "<b>Cultured buttermilk</b>\n Origin: Unknown\n Microbes: Mesophilic\n Preparation Notes: Traditionally produced from buttermilk, a coproduct of butter manufacture, and consumed as a beverage. Modern industrial manufacture typically uses nonfat milk instead of buttermilk. May be consumed as a beverage or used in cooking applications as a leavening agent"
+                "<b>Cultured buttermilk</b>\n Origin: Unknown\n Microbes: Mesophilic\n Preparation Notes: Traditionally produced from buttermilk, a coproduct of butter manufacture, and consumed as a beverage. Modern industrial manufacture typically uses nonfat milk instead of buttermilk. May be consumed as a beverage or used in cooking applications as a leavening agent."
             );
 
 
