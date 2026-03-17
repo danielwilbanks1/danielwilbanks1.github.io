@@ -328,6 +328,8 @@
     { column: 8, row: 11, text: "Kefir" },
     { column: 1, row: 12, text: "Cultured Cream", bold: true },
     { column: 2, row: 12, text: "Kashk/Kishk" },
+    { column: 2, row: 13, text: "Fromage blanc" },   
+    { column: 3, row: 12, text: "Chévre" },   
     { column: 5, row: 12, text: "Žinčica" },
     { column: 6, row: 12, text: "Chal" },
     { column: 7, row: 12, text: "Blaand" },
@@ -361,7 +363,7 @@
     { column: 3, row: 18, text: "Sikarni" }
   ];
 
-  // Create a 2D grid structure
+  // Create a 2D grid structure 
   const container = document.querySelector('.container');
 
   // Create each box in the grid
@@ -649,7 +651,14 @@ if (itemsInCell[0].bold) {
             showPopup(
                 "<b>Sana</b>\n Origin: Romania\n Microbes: Mesophilic\n Preparation Notes: Cultured, raw milk."
             );
-        } else if (item.textContent === "Cultured buttermilk") {
+        } else if (item.textContent === "Fromage blanc") {
+            showPopup(
+                "<b>Fromage blanc</b>\n Origin: Varied; Northern France, Belgium\n Microbes: Mesophilic - Lactococcus lactis, leuconostoc, others \n Preparation Notes: Milk is cultured and strained to desired consistency. Whole milk is traditionally used, but reduced fat and skim milk may also used. A small amount of rennet may be added during culturing."
+            );
+              } else if (item.textContent === "Chévre") {
+            showPopup(
+                "<b>Chevre</b>\n Origin: Varied\n Microbes: Mesophilic - Lactococcus lactis, leuconostoc, others \n Preparation Notes: Cultured goat's milk that is strained to remove whey. A small amount of rennet may be used."
+            );} else if (item.textContent === "Cultured buttermilk") {
             showPopup(
                 "<b>Cultured buttermilk</b>\n Origin: Unknown\n Microbes: Mesophilic\n Preparation Notes: Traditionally produced from buttermilk, a coproduct of butter manufacture, and consumed as a beverage. Modern industrial manufacture typically uses nonfat milk instead of buttermilk. May be consumed as a beverage or used in cooking applications as a leavening agent."
             );
